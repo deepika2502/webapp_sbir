@@ -1,5 +1,5 @@
 import streamlit as st
-import keras, os, cv2, pickle
+import os, cv2, pickle
 import numpy as np
 import tensorflow
 from tensorflow.keras.preprocessing import image
