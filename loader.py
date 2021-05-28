@@ -49,10 +49,8 @@ def load():
                     
         if st.button('Detect Sketch'):
                     query=[]
-                    import zipfile
-                    from pyunpack import Archive
-                    Archive('final_class.zip').extractall('.')
-                    with open('final_class.h5', 'rb') as file:
+                   
+                    with open('https://github.com/deepika2502/modelforwebapp/blob/63fef71465d460a009b615e766b27b30418a69b8/final_class.h5', 'rb') as file:
                         cnn = pickle.load(file)
                     vgg = VGG16(weights='imagenet',include_top=False,input_shape=(100,100,3))                
                     image = opencv_image
