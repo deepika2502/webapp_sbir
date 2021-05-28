@@ -1,9 +1,10 @@
 import streamlit as st
 import keras, os, cv2, pickle
 import numpy as np
-from keras.preprocessing import image
-from keras.preprocessing.image import ImageDataGenerator,array_to_img, img_to_array, load_img
-from keras.applications import VGG16
+import tensorflow
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import ImageDataGenerator,array_to_img, img_to_array, load_img
+from tensorflow.keras.applications import VGG16
 import cvlib as cv
 from cvlib.object_detection import draw_bbox
 from streamlit_drawable_canvas import st_canvas
@@ -49,8 +50,8 @@ def load():
         if st.button('Detect Sketch'):
                     query=[]
                     import zipfile
-                    with zipfile.ZipFile('final_class.zip', 'r') as zip_ref:
-                            zip_ref.extractall()
+                    from pyunpack import Archive
+                    Archive('final_class.zip').extractall('.')
                     with open('final_class.h5', 'rb') as file:
                         cnn = pickle.load(file)
                     vgg = VGG16(weights='imagenet',include_top=False,input_shape=(100,100,3))                
