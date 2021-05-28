@@ -4,4 +4,5 @@ numpy == 1.19.3
 opencv_python == 4.5.1.48
 streamlit
 streamlit_drawable_canvas
-Pillow
+tensorflow
+pyunpack
