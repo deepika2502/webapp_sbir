@@ -1,7 +1,7 @@
 import streamlit as st
 import os, cv2, pickle
 import numpy as np
-import tensorflow
+import tensorflow import keras
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator,array_to_img, img_to_array, load_img
 from tensorflow.keras.applications import VGG16
