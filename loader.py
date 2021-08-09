@@ -121,12 +121,7 @@ def load():
                             if j in label1:
                                 flag+=1
                     #find difference to rank the photos    
-                        if (len(query)-flag)==0:
-                            rank[i]=1
-                        elif (len(query)-flag)==1:
-                            rank[i]=2
-                        else:
-                            rank[i]=3
+                       rank[i] = (len(query)-flag) +1
                     rank={}
                     gif_runner = st.image('loading.gif')
                     
